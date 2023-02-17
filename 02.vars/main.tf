@@ -16,3 +16,19 @@ output "a" {
 output "x" {
   value = "Value of a = ${var.a}"
 }
+
+//Different ways in which inputs are given to variables in Terraform
+
+variable "b" {}
+//here input is given through terraform.tfvars file
+
+variable "c" {}
+//here the input is give through terraform CLI as -c=300 during terraform apply
+
+variable "d" {}
+//here the input is given through shell Environment variable using export TF_VARS_d=400
+
+//Accessing the above variables
+output "variables-values" {
+  values = "a=${var.a},b=${var.b},c=${var.c} and d=${var.d}"
+}
