@@ -30,5 +30,5 @@ variable "d" {}
 
 //Accessing the above variables
 output "variables-values" {
-  values = "a=${var.a},b=${var.b},c=${var.c} and d=${var.d}"
+  value = "a=${var.a},b=${var.b},c=${var.c} and d=${var.d}"
 }
