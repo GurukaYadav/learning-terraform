@@ -33,11 +33,23 @@ output "variables-values" {
   value = "a=${var.a},b=${var.b},c=${var.c} and d=${var.d}"
 }
 
-
+//example for accessing a particular variable value in list
 variable "sample" {
   default = [100, 200, "abc"]
 }
 
 output "sample" {
   value = var.sample[1]
+}
+
+//example for accessing a particular variable value in map
+variable "sample1" {
+  default = {
+    abc = 100
+    xyz = 200
+  }
+}
+
+output "sample1" {
+  value = var.sample1["abc"]
 }
