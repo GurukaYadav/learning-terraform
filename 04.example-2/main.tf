@@ -1,8 +1,9 @@
-module "ec2" {
+module "instance" {
   source = "./ec2"
+  SGID = module.sg.SGID
 }
 
-module "security-group" {
+module "sg" {
   source = "./security-group"
 }
 
