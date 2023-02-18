@@ -32,3 +32,12 @@ variable "d" {}
 output "variables-values" {
   value = "a=${var.a},b=${var.b},c=${var.c} and d=${var.d}"
 }
+
+
+variable "sample" {
+  default = [100, 200, "abc"]
+}
+
+output "sample" {
+  value = var.sample[1]
+}
