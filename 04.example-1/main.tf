@@ -33,4 +33,11 @@ resource "aws_security_group" "allow_ssh" {
   tags = {
     Name = "allow_ssh"
   }
+
+terraform {
+  backend "s3" {
+    bucket = "terraform"
+    key    = "example-1/terraform.tfstate"
+    region = "us-east-1"
+  }
 }
