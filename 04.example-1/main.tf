@@ -34,6 +34,8 @@ resource "aws_security_group" "allow_ssh" {
     Name = "allow_ssh"
   }
 
+}
+
 terraform {
   backend "s3" {
     bucket = "terraform-sfiles"
