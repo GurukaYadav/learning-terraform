@@ -4,6 +4,6 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "Avinash"
+    Name = "Avinash-${count.index}"
   }
 }
