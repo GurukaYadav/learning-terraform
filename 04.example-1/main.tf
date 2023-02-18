@@ -36,7 +36,7 @@ resource "aws_security_group" "allow_ssh" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform"
+    bucket = "terraform-sfiles"
     key    = "example-1/terraform.tfstate"
     region = "us-east-1"
   }
