@@ -1,10 +1,10 @@
+module "sg" {
+  source = "./security-group"
+}
+
 module "instance" {
   source = "./ec2"
   SGID = module.sg.SGID
-}
-
-module "sg" {
-  source = "./security-group"
 }
 
 terraform {
