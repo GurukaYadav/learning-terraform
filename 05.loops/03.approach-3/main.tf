@@ -13,5 +13,5 @@ resource "aws_instance" "web" {
 }
 
 variable "instance_type" {
-  default = [t3.micro, t2.small]
+  default = ["t3.micro", "t2.small"]
 }
