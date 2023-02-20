@@ -3,13 +3,13 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = Avinash
+    Name = "Avinash"
   }
 
   connection {
       type     = "ssh"
       user     = "root"
-      password = DevOps321
+      password = "DevOps321"
       host     = self.public_ip
   }
 
