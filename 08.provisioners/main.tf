@@ -7,12 +7,6 @@ resource "aws_instance" "web" {
     Name = "Avinash"
   }
 
-  connection {
-    type     = "ssh"
-    user     = "root"
-    password = "DevOps321"
-    host     = self.public_ip
-  }
 }
 
 resource "null_resource" "null" {
@@ -20,6 +14,13 @@ resource "null_resource" "null" {
     inline = [
       "uname -a"
     ]
+  }
+
+  connection {
+    type     = "ssh"
+    user     = "root"
+    password = "DevOps321"
+    host     = self.public_ip
   }
 }
 
