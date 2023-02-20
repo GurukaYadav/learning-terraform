@@ -10,7 +10,7 @@ resource "aws_instance" "web" {
     type     = "ssh"
     user     = "root"
     password = "DevOps321"
-    host     = self.public_ip
+    host     = aws_instance.web.public_ip
   }
 
   provisioner "remote-exec" {
