@@ -13,7 +13,9 @@ resource "aws_instance" "web" {
     password = "DevOps321"
     host     = self.public_ip
   }
+}
 
+resource "null_resource" "null" {
   provisioner "remote-exec" {
     inline = [
       "uname -a"
