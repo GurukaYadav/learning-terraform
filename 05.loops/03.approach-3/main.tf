@@ -15,3 +15,5 @@ resource "aws_instance" "web" {
 variable "instance_type" {
   default = ["t3.micro", "t2.small"]
 }
+
+//Here the requirement is to create number of instances based on the no of instance types
