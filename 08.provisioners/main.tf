@@ -10,6 +10,7 @@ resource "aws_instance" "web" {
 }
 //here we are keeping the connection inside the provisoner. If you have multi provisoners and you want to use the same connection for all provisioners, you can keep the connection thing outsied of provisoner.
 //Also, sometimes I want the created server as it is and I want ot change something inside that server. So, thata the reason we are using the null_resource thing
+//Null resource has a property to allow you to re-trigger the full resource
 
 resource "null_resource" "null" {
   provisioner "remote-exec" {
