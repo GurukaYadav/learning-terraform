@@ -12,7 +12,7 @@ resource "aws_instance" "web" {
 resource "null_resource" "null" {
   provisioner "remote-exec" {
     inline = [
-      "uname -a"
+      "uname"
     ]
   }
 
