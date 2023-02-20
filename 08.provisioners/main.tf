@@ -15,7 +15,9 @@ resource "null_resource" "null" {
       "uname"
     ]
   }
-
+  triggers = {
+    a = timestamp()
+  }
   connection {
     type     = "ssh"
     user     = "root"
