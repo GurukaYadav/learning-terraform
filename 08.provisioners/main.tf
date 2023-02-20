@@ -8,9 +8,17 @@ resource "aws_instance" "web" {
   }
 
 }
+//here we are keeping the connection inside the provisoner. If you have multi provisoners and you want to use the same connection for all provisioners, you can keep the connection thing outsied of provisoner.
+//Also, sometimes I want the created server as it is and I want ot change something inside that server. So, thata the reason we are using the null_resource thing
 
 resource "null_resource" "null" {
   provisioner "remote-exec" {
+    connection {
+      type     = "ssh"
+      user     = "root"
+      password = "DevOps321"
+      host     = aws_instance.web.public_ip
+    }
     inline = [
       "uname"
     ]
