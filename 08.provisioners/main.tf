@@ -16,7 +16,7 @@ resource "aws_instance" "web" {
 
   provisioner "remote-exec" {
     inline = [
-      "uname"
+      "uname -a"
     ]
   }
 }
