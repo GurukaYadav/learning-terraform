@@ -12,3 +12,8 @@ resource "aws_instance" "web" {
     Name = "Avinash-${count.index+1}"
   }
 }
+
+//Here we have the count of instances(multiple instances),so to get the output of all the instaces "*" is used
+output "public_ip-address" {
+  value = aws_instance.web.*.public_ip
+}
